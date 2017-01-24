@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var input = document.getElementById('filter-words');
   //reinstate saved words
   input.value = window.localStorage['filterWords'] || "";
-  
+
   document.getElementById('filter-words')
     .addEventListener('keyup', function(e){
       window.localStorage['filterWords'] = input.value;
@@ -13,4 +13,3 @@ document.addEventListener('DOMContentLoaded', function () {
       chrome.runtime.sendMessage({keyup: true});
     });
 });
-
