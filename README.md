@@ -1,6 +1,7 @@
 # chrome-extension-hn-filter
 
 [Get it from Chrome Webstore](https://chrome.google.com/webstore/detail/hn-keyword-filter/ooablmjjcdbdjhhjkaffpbjnanonjgnm?hl=en-US&gl=US)
+[HN Discussion](https://news.ycombinator.com/item?id=13467611)
 
 HN's gotten markedly more political in recent months. 
 There are plenty of places to finger-argue on the net, 
