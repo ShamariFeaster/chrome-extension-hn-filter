@@ -1,7 +1,7 @@
 { 
   "manifest_version": 2,
   "name": "HN Keyword Filter",
-  "version": "0.1",
+  "version": "0.2",
 
   "default_locale": "en",
   "description": "Stop seeing HN stories on offending topics",
