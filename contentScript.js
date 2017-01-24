@@ -5,33 +5,27 @@ chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
 
     if(request.parse ){
-      
+
       var wordlist = request.wordlist;
       var entries =  document.querySelectorAll("[class^='athing']");
 
       var entryParent = null;
 
+      var re = new RegExp('(' + wordlist.join('|') + ')', 'gi');
+
       for(let i = 0; i < entries.length; i++){
         //was accidentally deleting comments too. could be a feature though, right?
         //unintended consequence and/or serendipity?
         if(entries[i].getAttribute('class').indexOf('comtr') > -1) continue;
-        
+
         entryParent = entries[i].parentNode;
-        
-        //I'd love to see this replaced by regex, volunteers anyone?
-        for(let n = 0; n < wordlist.length; n++){
-          let thisWord = wordlist[n].toLowerCase();
-          let thisText = entries[i].textContent.toLowerCase();
-          
-          if(thisText.indexOf(thisWord) > -1 && thisWord.length > 1){
-            console.log('removing ' + thisText + ' keyword:' + thisWord);
-            entryParent.removeChild(entries[i].nextSibling); //remove metadata link (karma, author, etc)
-            entryParent.removeChild(entries[i]);            //remove actual link
-            break;
-          }
+        var thisText = entries[i].textContent;
+
+        if(thisText.match(re)) {
+          console.log('removing ' + thisText );
+          entryParent.removeChild(entries[i].nextSibling); //remove metadata link (karma, author, etc)
+          entryParent.removeChild(entries[i]);            //remove actual link
         }
-        
       }
     }
-      
   });
