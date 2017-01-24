@@ -1,5 +1,7 @@
 # chrome-extension-hn-filter
 
+[Get it from Chrome Webstore](https://chrome.google.com/webstore/detail/hn-keyword-filter/ooablmjjcdbdjhhjkaffpbjnanonjgnm?hl=en-US&gl=US)
+
 HN's gotten markedly more political in recent months. There are plenty of places to finger-argue on the net, so I made this extension that allows you to create a list of keywords and links with those keywords in the title are removed before you see them.
 
 Instructions:
