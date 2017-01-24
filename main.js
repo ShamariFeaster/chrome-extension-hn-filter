@@ -19,7 +19,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
 chrome.webNavigation.onDOMContentLoaded.addListener(function(){
 
   var words = window.localStorage['filterWords'];
-  var words = words.split(', ');
+  var words = words.split(',');
   //delay b/c race conditions with contentScript listener binding
   setTimeout(function(){
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
