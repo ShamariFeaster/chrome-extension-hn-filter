@@ -6,8 +6,8 @@ HN's gotten markedly more political in recent months.
 There are plenty of places to finger-argue on the net, 
 so I made this extension that allows you to create a list of keywords.
 Links with those keywords in the title are removed before you see them.
-You can also use this to filter out stories about a language youaren't interest in like "C++"
-for example.
+You can also use this to filter out stories about a language you aren't interested in like "C++",
+ for example.
 
 Instructions:
 
