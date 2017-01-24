@@ -12,6 +12,10 @@ chrome.runtime.onMessage.addListener(
       var entryParent = null;
 
       for(let i = 0; i < entries.length; i++){
+        //was accidentally deleting comments too. could be a feature though, right?
+        //unintended consequence and/or serendipity?
+        if(entries[i].getAttribute('class').indexOf('comtr') > -1) continue;
+        
         entryParent = entries[i].parentNode;
         
         //I'd love to see this replaced by regex, volunteers anyone?
